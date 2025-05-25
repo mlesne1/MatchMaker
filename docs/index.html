@@ -18,23 +18,24 @@
       font-family: 'Inter', sans-serif;
       transition: background-color 0.3s, color 0.3s;
     }
-
+  
     .sidebar {
       width: 240px;
       transition: background-color 0.3s, color 0.3s;
     }
-
+  
     .app-name {
       font-size: 22px;
       font-weight: 600;
     }
-
-    /* Dark mode styles */
+  
+    /* Dark mode base */
     body.dark-mode {
       background-color: #1e1e1e;
       color: #dcdcdc;
     }
-
+  
+    /* Headings and emphasis */
     body.dark-mode h1,
     body.dark-mode h2,
     body.dark-mode h3,
@@ -45,24 +46,31 @@
     body.dark-mode b {
       color: #ffffff;
     }
-
+  
+    /* Inline code blocks like `MatchMakerService` */
+    body.dark-mode code {
+      background-color: #2d2d2d;
+      color: #f78c6c;
+    }
+  
+    /* Sidebar appearance */
     body.dark-mode .sidebar {
       background-color: #121212;
     }
-
+  
     body.dark-mode .sidebar a {
       color: #cccccc;
     }
-
+  
     body.dark-mode .sidebar a:hover {
       color: #ffffff;
     }
-
+  
     body.dark-mode .app-name,
     body.dark-mode .sidebar-toggle {
       color: #9cdcfe !important;
     }
-
+  
     /* Theme toggle button */
     .theme-toggle {
       position: fixed;
@@ -78,7 +86,7 @@
       user-select: none;
       transition: background 0.3s;
     }
-
+  
     .theme-toggle:hover {
       background: #36976b;
     }
