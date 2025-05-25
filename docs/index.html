@@ -19,17 +19,17 @@
       transition: background-color 0.3s, color 0.3s;
     }
 
-    .app-name {
-      font-size: 22px;
-      font-weight: 600;
-    }
-
     .sidebar {
       width: 240px;
       transition: background-color 0.3s, color 0.3s;
     }
 
-    /* Dark mode overrides */
+    .app-name {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    /* Dark mode styles */
     body.dark-mode {
       background-color: #1e1e1e;
       color: #dcdcdc;
@@ -37,7 +37,12 @@
 
     body.dark-mode h1,
     body.dark-mode h2,
-    body.dark-mode h3 {
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6,
+    body.dark-mode strong,
+    body.dark-mode b {
       color: #ffffff;
     }
 
@@ -104,4 +109,5 @@
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-</body
+</body>
+</html>
