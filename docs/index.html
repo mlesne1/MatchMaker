@@ -7,7 +7,46 @@
   <meta name="description" content="Custom Matchmaking System for Roblox with MemoryStore & PrivateServer support.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root {
+      --theme-color: #42b983;
+    }
+  
+    body.dark-mode {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+    }
+  
+    body.dark-mode a {
+      color: #9cdcfe;
+    }
+  
+    .theme-toggle {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: var(--theme-color);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 999;
+      font-size: 14px;
+      user-select: none;
+    }
+  </style>
 </head>
+<div class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</div>
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
+</script>
 <body>
   <div id="app"></div>
   <script>
