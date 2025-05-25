@@ -25,8 +25,40 @@
     }
 
     .app-name {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 600;
+      padding-left: 1rem;
+      color: #ffffff !important;
+    }
+
+    /* Move toggle button to top-left and style it */
+    .sidebar-toggle {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      background: #121212 !important;
+      border: none;
+      border-radius: 0;
+      height: 48px;
+      width: 48px;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sidebar-toggle span {
+      background-color: #42b983 !important;
+    }
+
+    /* Top nav bar */
+    .app-nav {
+      background-color: #121212 !important;
+      border-bottom: 1px solid #2a2a2a;
+      padding-left: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
     }
 
     /* Dark mode base */
@@ -66,7 +98,6 @@
     body.dark-mode h5 a:hover,
     body.dark-mode h6 a:hover {
       color: #9cdcfe !important;
-      text-decoration: none;
     }
 
     body.dark-mode h1 a span,
