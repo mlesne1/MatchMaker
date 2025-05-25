@@ -11,16 +11,16 @@
     :root {
       --theme-color: #42b983;
     }
-  
+
     body.dark-mode {
       background-color: #1e1e1e;
       color: #dcdcdc;
     }
-  
+
     body.dark-mode a {
       color: #9cdcfe;
     }
-  
+
     .theme-toggle {
       position: fixed;
       bottom: 1rem;
@@ -36,26 +36,28 @@
     }
   </style>
 </head>
-<div class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</div>
-<script>
-  function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  }
-
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-  }
-</script>
 <body>
   <div id="app"></div>
+  <div class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+
   <script>
     window.$docsify = {
       name: 'MatchMaker',
       repo: 'mlesne1/MatchMaker',
       loadSidebar: true,
       subMaxLevel: 2,
-      themeColor: '#4CAF50', // Optional: Set your brand color
+      themeColor: '#4CAF50',
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
