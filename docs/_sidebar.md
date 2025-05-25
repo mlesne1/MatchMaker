@@ -1,0 +1,14 @@
+- [🏠 Home](README.md)
+- **Getting Started**
+  - [📦 What is MatchMaker?](README.md#what-is-it)
+  - [📁 Modules Overview](README.md#modules)
+- **API Reference**
+  - [🧩 MatchMakerService](api/matchmaker.md)
+  - [🌍 RegionalQueue](api/regionalqueue.md)
+  - [🔐 PrivateServer](api/privateserver.md)
+- **Examples**
+  - [👤 Solo Matchmaking](examples/solo.md)
+  - [👥 Duo Matchmaking](examples/duo.md)
+  - [🔁 Rejoin Flow](examples/rejoin.md)
+- [❓ FAQ](faq.md)
+- [📄 Full API](api.md)
