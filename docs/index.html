@@ -36,7 +36,7 @@
       position: fixed !important;
       top: 0;
       left: 0;
-      background: #121212 !important;
+      background: none !important;
       border: none;
       border-radius: 0;
       height: 48px;
@@ -80,7 +80,6 @@
       text-decoration: none;
     }
 
-    /* Markdown header links (anchor style) */
     body.dark-mode h1 a,
     body.dark-mode h2 a,
     body.dark-mode h3 a,
@@ -109,10 +108,20 @@
       color: #ffffff !important;
     }
 
-    /* Inline code blocks like `MatchMakerService` */
-    body.dark-mode code {
-      background-color: #2d2d2d;
-      color: #f78c6c;
+    /* Inline code and block code */
+    body.dark-mode code,
+    body.dark-mode pre {
+      background-color: #2d2d2d !important;
+      color: #ffffff;
+      overflow-x: auto;
+    }
+
+    pre code {
+      white-space: pre-wrap;
+      word-break: break-word;
+      display: block;
+      padding: 1rem;
+      border-radius: 4px;
     }
 
     /* Sidebar appearance */
@@ -171,13 +180,18 @@
 
   <script>
     window.$docsify = {
-      name: 'MatchMaker',
+      name: 'MatchMaker (v0.1)',
       repo: 'mlesne1/MatchMaker',
       loadSidebar: true,
-      subMaxLevel: 2,
+      subMaxLevel: 3,
       themeColor: '#42b983'
     }
   </script>
+
+  <!-- Docsify -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- Prism.js with Lua syntax support -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-lua.min.js"></script>
 </body>
 </html>

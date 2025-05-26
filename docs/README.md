@@ -1,22 +1,5 @@
-# 🎮 Matchmaker for Roblox
+# 🎮 MatchMaker
 
-Welcome to the official documentation for the Matchmaker system!
+**MatchMaker** is a modular matchmaking system for Roblox, supporting solo/duo/custom queues, regional server distribution, private server teleportation, and persistent party recovery using MemoryStore and Promises.
 
-> 🔗 [View API Reference](./api.md)  
-> 🧪 [Try Examples](./examples.md)
-
-## 🚀 What is it?
-
-**Matchmaker** is a modular, region-aware matchmaking system built for Roblox games. It supports solo/duo queues, private server teleportation, and persistent player queue state using MemoryStore and Promises.
-
-## 📦 Modules
-
-- `MatchMakerService`
-- `RegionalQueue`
-- `PrivateServer`
-
-## 📚 Docs Structure
-
-- API: [api.md](./api.md)
-- Examples: [examples.md](./examples.md)
-- Sidebar: [_sidebar.md](./_sidebar.md)
+👉 [View the full documentation](https://mlesne1.github.io/MatchMaker/#/)
