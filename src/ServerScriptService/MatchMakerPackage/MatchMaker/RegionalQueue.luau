@@ -3,7 +3,7 @@ RegionalQueue.__index = RegionalQueue
 
 -- Variables
 
-local Release = "v0.1"
+local Release = "v0.2"
 local RunService = game:GetService("RunService")
 local MessagingService = game:GetService("MessagingService")
 local MemoryStore = game:GetService("MemoryStoreService")
