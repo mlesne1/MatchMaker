@@ -11,11 +11,11 @@ local RegionLockMap = MemoryStore:GetHashMap("RegionLocks"..Release)
 
 local PrivateServer = require(script.Parent.Parent:WaitForChild("PrivateServer"))
 
-local Utils = game.ReplicatedStorage:WaitForChild("Utils")
-local Signal = require(Utils:WaitForChild("Signal"))
-local Thread = require(Utils:WaitForChild("Thread"))
-local Promise = require(Utils:WaitForChild("Promise"))
-local Maid = require(Utils:WaitForChild("Maid"))
+local Config = require(game.ServerScriptService.MatchMakerPackage:WaitForChild("Config"))
+local Signal = require(Config.Signal)
+local Thread = require(Config.Thread)
+local Promise = require(Config.Promise)
+local Maid = require(Config.Maid)
 
 local QUEUE_TIMEOUT = 60 * 20 -- seconds
 local PARTY_TIMEOUT = 60*60*24 -- seconds
@@ -96,9 +96,7 @@ function RegionalQueue:TeleportPartyAsync(Party, MatchId)
 		
 	end):andThen(function(Match)
 		
-		self:RemovePartyTable(Party.Id)
-		
-		self.Mode.PartyRemoved:Fire(Party, Match)
+		self:RemovePartyTable(Party.Id, Match)
 		
 	end)
 end
@@ -228,7 +226,7 @@ function RegionalQueue:AddPartyAsync(PartyMemberIds, PartyData)
 	end)
 end
 
-function RegionalQueue:RemovePartyTable(PartyId)
+function RegionalQueue:RemovePartyTable(PartyId, Match)
 	--[[
 		Immediately removes a party from the in-memory queue and signals removal.
 
@@ -246,7 +244,7 @@ function RegionalQueue:RemovePartyTable(PartyId)
 	
 	self.Cache[PartyId] = nil
 	
-	self.Mode.PartyRemoved:Fire(CacheTable.Party)
+	self.Mode.PartyRemoved:Fire(CacheTable.Party, Match)
 	
 	self:RemoveEmptyQueue()
 end
