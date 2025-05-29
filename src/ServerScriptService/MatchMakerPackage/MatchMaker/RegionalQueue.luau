@@ -11,11 +11,11 @@ local RegionLockMap = MemoryStore:GetHashMap("RegionLocks"..Release)
 
 local PrivateServer = require(script.Parent.Parent:WaitForChild("PrivateServer"))
 
-local Config = require(game.ServerScriptService.MatchMakerPackage:WaitForChild("Config"))
-local Signal = require(Config.Signal)
-local Thread = require(Config.Thread)
-local Promise = require(Config.Promise)
-local Maid = require(Config.Maid)
+local Utils = game.ReplicatedStorage:WaitForChild("Utils")
+local Signal = require(Utils:WaitForChild("Signal"))
+local Thread = require(Utils:WaitForChild("Thread"))
+local Promise = require(Utils:WaitForChild("Promise"))
+local Maid = require(Utils:WaitForChild("Maid"))
 
 local QUEUE_TIMEOUT = 60 * 20 -- seconds
 local PARTY_TIMEOUT = 60*60*24 -- seconds
