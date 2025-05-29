@@ -125,7 +125,7 @@ function MatchMakerService:AddPartyAsync(PartyMemberIds, PartyData, RegionCode)
 	
 	local RegionalQueue = self:GetRegionalQueue(RegionCode)
 	
-	return RegionalQueue:AddPartyAsync(PartyMemberIds):await()
+	return RegionalQueue:AddPartyAsync(PartyMemberIds, PartyData):await()
 end
 
 function MatchMakerService:RemovePartyAsync(PartyId, Forced)
