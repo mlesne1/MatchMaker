@@ -1,0 +1,12 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Luau files
+*.luau text eol=lf
+*.lua text eol=lf
+
+# JSON files
+*.json text eol=lf
+
+# Project files
+*.project.json text eol=lf
